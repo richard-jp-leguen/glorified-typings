@@ -113,7 +113,7 @@ When we spoke about references, I mentioned how you also use references in Java.
 
 I won't be showing you how to define classes and objects; I'll just show you a couple of lines of code which use objects in Perl.
 
-So here's a little bit of code which uses objects in Perl. In order for it to work, you will have to download the [Dog.pm](/scripts/soen229/Dog.pm) script in which I have defined class `Dog`. (we're not going to define class `Dog` together as defining objects in Perl is – in my opinion – the most digusting and nonsensical part of Perl syntax) You'll then have to `require` the 'Dog.pm' script.
+So here's a little bit of code which uses objects in Perl. In order for it to work, you will have to download the [Dog.pm](scripts/Dog.pm) script in which I have defined class `Dog`. (we're not going to define class `Dog` together as defining objects in Perl is – in my opinion – the most digusting and nonsensical part of Perl syntax) You'll then have to `require` the 'Dog.pm' script.
 
     require 'Dog.pm';
 

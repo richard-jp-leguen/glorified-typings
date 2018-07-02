@@ -167,7 +167,7 @@ In the code above, I don't create a file handle; I am using the pre-defined STDO
 
 ## Accepting Either Piped Input or a Filename
 
-Several assignments used the `-t` filehandle to determine if the script it receiving piped input. While this is good, most assignments also used it in a very big if-else, and wrote up the same code twice using different filehandles. In [this tutorial](/tutoring/soen229/tutorials/linux-and-perl) we saw a way in which we can re-assign a filehandle:
+Several assignments used the `-t` filehandle to determine if the script it receiving piped input. While this is good, most assignments also used it in a very big if-else, and wrote up the same code twice using different filehandles. In [this tutorial](tut-03.linux-and-perl.md) we saw a way in which we can re-assign a filehandle:
 
     $substring = $ARGV[0];
     if($ARGV[1]) { # the second argument is a file name.

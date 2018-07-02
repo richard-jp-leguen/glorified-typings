@@ -2,14 +2,14 @@
 
 ## The Text-Analyzer Script
 
-To begin, we're going to write our text-analysis script to look very similar to our `cat` command script (see the [tutorial on Linux and Perl](/tutoring/soen229/tutorials/linux-and-perl) from January 14th) except that we will read from `STDIN`:
+To begin, we're going to write our text-analysis script to look very similar to our `cat` command script (see the [tutorial on Linux and Perl](tut-03.linux-and-perl.md) from January 14th) except that we will read from `STDIN`:
 
     while($line = <STDIN>) {
 
     }
     print "\n";
 
-Until we write a script to download a document and pipe it into our analyzer, we'll need to do it manually. Look at [last week's tutorial](/tutoring/soen229/tutorials/perl-regex) to see how to use the Linux command line tool `wget` to download the document to a file. We'll then pipe its content like so:
+Until we write a script to download a document and pipe it into our analyzer, we'll need to do it manually. Look at [last week's tutorial](tut-05.perl-regex-cont.md) to see how to use the Linux command line tool `wget` to download the document to a file. We'll then pipe its content like so:
 
     perl TextAnalyzer.pl < tutorial-2.html
 

@@ -6,11 +6,11 @@ In this tutorial, we're going to write a simplistic script which reads an HTTP r
 
 You do **not** need to know _*ANYTHING*_ about networking or socket programming to go through with either this tutorial, nor the material we will be covering later in the semester! If you don't know what I mean by either "networking" nor "socket programming" don't worry! You shouldn't know those concepts, you don't have to know those concepts, and you won't have to know those concepts!
 
-All we're doing is writing a script which reads specially formatted text input – called an HTTP request (see [this](/tutoring/soen229/tutorials/web-and-http) tutorial) – via STDIN, and generates specially formatted text output – via STDOUT – which we call an HTTP response (again, see [this](/tutoring/soen229/tutorials/web-and-http) tutorial).
+All we're doing is writing a script which reads specially formatted text input – called an HTTP request (see [this](tut-11.web-and-http.md) tutorial) – via STDIN, and generates specially formatted text output – via STDOUT – which we call an HTTP response (again, see [this](tut-11.web-and-http.md) tutorial).
 
-Once you're done, you may want to test the script we write in this tutorial. There would be no better way to do this than actually send it an HTTP response from you favorite web browser (which should be Firefox!). So you can do this without knowing _*ANYTHING*_ about networking or socket programming I've provided a script, [HttpWebServer.pl](/scripts/soen229/HttpWebServer.pl), which will let you do exactly that!
+Once you're done, you may want to test the script we write in this tutorial. There would be no better way to do this than actually send it an HTTP response from you favorite web browser (which should be Firefox!). So you can do this without knowing _*ANYTHING*_ about networking or socket programming I've provided a script, [HttpWebServer.pl](scripts/HttpWebServer.pl), which will let you do exactly that!
 
-### How do I use the [HttpWebServer.pl](/scripts/soen229/HttpWebServer.pl) Perl Script?
+### How do I use the [HttpWebServer.pl](scripts/HttpWebServer.pl) Perl Script?
 
 If _your_ script is called 'HttpStuff.pl', run my script like so: (from the Command Line)
 
@@ -30,7 +30,7 @@ And if – at the end of tutorial – your script works, you should see a hello 
 
 ### Outputting an HTTP Response to STDOUT
 
-We're going to start with producing an HTTP response. We want to write an HTTP response to STDOUT. As we saw in [this](/tutoring/soen229/tutorials/web-and-http) tutorial an HTTP response begins with a status line, like the following:
+We're going to start with producing an HTTP response. We want to write an HTTP response to STDOUT. As we saw in [this](tut-11.web-and-http.md) tutorial an HTTP response begins with a status line, like the following:
 
     print STDOUT "HTTP/1.0 200 OK\n";
 
@@ -79,7 +79,7 @@ For now, since we're ignoring requests which contain bodies, were only going to 
     	$request .= $stdin;
     } while($stdin =~ /\S/);
 
-Now its just a matter of extracting the first line of the HTTP request and determining what that URL of the request was. I'm not going to show you how to do this; that's easy stuff using what we learned in the [first tutorial](/tutoring/soen229/tutorials/linux-and-perl).
+Now its just a matter of extracting the first line of the HTTP request and determining what that URL of the request was. I'm not going to show you how to do this; that's easy stuff using what we learned in the [first tutorial](tut-03.linux-and-perl.md).
 
 So from here on in I'll assume that `$url` is a variable into which I've extracted the request's URL. I need to determine if there is a file in the document root which corresponds to that file, and if I can read that file. If it exists, I should read and output its contents in the body of my response. For now, I will only allow requests to download HTML files so we don't have to worry about changing the Content-Type header. (note above it was 'text/plain' and here is it 'text/html')
 

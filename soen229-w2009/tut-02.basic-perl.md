@@ -72,4 +72,4 @@ You can also run a Perl script without invoking the interpreter directly; by inc
 
     ./MyFirstScript.pl
 
-Click [here](/tutoring/soen229/tutorials/linux-and-perl) for the next part of this week’s tutorial.
+Click [here](tut-03.linux-and-perl.md) for the next part of this week’s tutorial.

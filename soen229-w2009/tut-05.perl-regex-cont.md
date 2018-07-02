@@ -2,7 +2,7 @@
 
 Last week we were unable to go in-dept as to what Perl Regular Expressions were, and how to use them.
 
-So, we'll have to start this tutorial with the end of last week's tutorial on [The Linux Command Line (and More Perl)](/tutoring/soen229/tutorials/linux-and-perl)
+So, we'll have to start this tutorial with the end of last week's tutorial on [The Linux Command Line (and More Perl)](tut-03.linux-and-perl.md)
 
 Once you've gone over the end of that tutorial (the part on the Grep command and Regular Expressions) continue on to…
 
