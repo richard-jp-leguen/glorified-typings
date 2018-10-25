@@ -1,0 +1,596 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional-dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" >
+<head>
+	<title>Calendar for SOEN 287 Tutorial</title>
+	<!--
+	Link to the external CSS file.
+	Take note that as you are not permitted to modify the HTML file AT ALL,
+	 you must name your CSS file 'assignment5.css'
+	 -->
+	<link type="text/css" rel="stylesheet" href="assignment5.css" />
+	<!--
+	... the same for the JavaScript file!
+	-->
+	<script type="text/javascript" src="assignment5.js"></script>
+</head>
+<body>
+	<div id="PageMain">
+		<div id="MonthsNavBar">
+			<ul>
+				<li><a href="#January">January</a></li>
+				<li><a href="#February">February</a></li>
+				<li><a href="#March">March</a></li>
+				<li><a href="#April">April</a></li>
+				<li><a href="#May">May</a></li>
+				<li><a href="#June">June</a></li>
+				<li><a href="#July">July</a></li>
+				<li><a href="#August">August</a></li>
+				<li><a href="#September">September</a></li>
+				<li><a href="#October">October</a></li>
+				<li><a href="#November">November</a></li>
+				<li><a href="#December">December</a></li>
+			</ul>
+		</div>
+		<div id="CoursesNavBar">
+			<ul>
+				<li><a href="#SOEN287">SOEN 287</a></li>
+				<li><a href="#SOEN490">SOEN 490</a></li>
+				<li><a href="#ENGR 391">ENGR 391</a></li>
+			</ul>
+		</div>
+		<div id="MainContent">
+			<h1>My Weekly Schedule</h1>
+			<script type="text/javascript">
+				/*
+					A CDATA section is like an XML comment, but it is included in the document.
+					It will allow the HTML file to be validated,
+					even though there is a stray > character in the if() condition
+				*/
+				//<![CDATA[
+				// Note that since CDATA is not valid JavaScript, we have to put it in a line comment.
+				new function() {
+					var richardCalenderWeekOfDate = new Date();
+					while(richardCalenderWeekOfDate.getDay()>0){
+						richardCalenderWeekOfDate.setDate(richardCalenderWeekOfDate.getDate()-1);
+					}
+					document.writeln("<h2>Week of <span class=\"date\">"+richardCalenderWeekOfDate.toDateString()+"</span></h2>");
+				}();
+				// The end of the CDATA section is marked by the two ] characters and the >
+				//]]>
+
+			</script>
+
+			<div id="WeeklySchedule">
+				<div id="Time" class="TimeSlots">
+				<h3>Time</h3>
+				<ol class="TimeSlots" id="Time">
+					<li id="Time08h00">8:00am</li>
+					<li id="Time08h15">8:15am</li>
+					<li id="Time08h30">8:30am</li>
+					<li id="Time08h45">8:45am</li>
+					<li id="Time09h00">9:00am</li>
+					<li id="Time09h15">9:15am</li>
+					<li id="Time09h30">9:30am</li>
+					<li id="Time09h45">9:45am</li>
+					<li id="Time10h00">10:00am</li>
+					<li id="Time10h15">10:15am</li>
+					<li id="Time10h30">10:30am</li>
+					<li id="Time10h45">10:45am</li>
+					<li id="Time11h00">11:00am</li>
+					<li id="Time11h15">11:15am</li>
+					<li id="Time11h30">11:30am</li>
+					<li id="Time11h45">11:45am</li>
+					<li id="Time12h00">12:00am</li>
+					<li id="Time12h15">12:15am</li>
+					<li id="Time12h30">12:30am</li>
+					<li id="Time12h45">12:45am</li>
+					<li id="Time13h00">1:00pm</li>
+					<li id="Time13h15">1:15pm</li>
+					<li id="Time13h30">1:30pm</li>
+					<li id="Time13h45">1:45pm</li>
+					<li id="Time14h00">2:00pm</li>
+					<li id="Time14h15">2:15pm</li>
+					<li id="Time14h30">2:30pm</li>
+					<li id="Time14h45">2:45pm</li>
+					<li id="Time15h00">2:00pm</li>
+					<li id="Time15h15">3:15pm</li>
+					<li id="Time15h30">3:30pm</li>
+					<li id="Time15h45">3:45pm</li>
+					<li id="Time16h00">4:00pm</li>
+					<li id="Time16h15">4:15pm</li>
+					<li id="Time16h30">4:30pm</li>
+					<li id="Time16h45">4:45pm</li>
+					<li id="Time17h00">5:00pm</li>
+					<li id="Time17h15">5:15pm</li>
+					<li id="Time17h30">5:30pm</li>
+					<li id="Time17h45">5:45pm</li>
+					<li id="Time18h00">6:00pm</li>
+					<li id="Time18h15">6:15pm</li>
+					<li id="Time18h30">6:30pm</li>
+					<li id="Time18h45">6:45pm</li>
+					<li id="Time19h00">7:00pm</li>
+					<li id="Time19h15">7:15pm</li>
+					<li id="Time19h30">7:30pm</li>
+					<li id="Time19h45">7:45pm</li>
+					<li id="Time20h00">8:00pm</li>
+					<li id="Time20h15">8:15pm</li>
+					<li id="Time20h30">8:30pm</li>
+					<li id="Time20h45">8:45pm</li>
+				</ol>
+				</div>
+				<div class="DayOfWeek TimeSlots" id="Sunday">
+				<h3><acronym title='Sunday'>Sun</acronym></h3>
+				<ol>
+					<li id="Sunday08h00"></li>
+					<li id="Sunday08h15"></li>
+					<li id="Sunday08h30"></li>
+					<li id="Sunday08h45"></li>
+					<li id="Sunday09h00"></li>
+					<li id="Sunday09h15"></li>
+					<li id="Sunday09h30"></li>
+					<li id="Sunday09h45"></li>
+					<li id="Sunday10h00"></li>
+					<li id="Sunday10h15"></li>
+					<li id="Sunday10h30"></li>
+					<li id="Sunday10h45"></li>
+					<li id="Sunday11h00"></li>
+					<li id="Sunday11h15"></li>
+					<li id="Sunday11h30"></li>
+					<li id="Sunday11h45"></li>
+					<li id="Sunday12h00"></li>
+					<li id="Sunday12h15"></li>
+					<li id="Sunday12h30"></li>
+					<li id="Sunday12h45"></li>
+					<li id="Sunday13h00"></li>
+					<li id="Sunday13h15"></li>
+					<li id="Sunday13h30"></li>
+					<li id="Sunday13h45"></li>
+					<li id="Sunday14h00"></li>
+					<li id="Sunday14h15"></li>
+					<li id="Sunday14h30"></li>
+					<li id="Sunday14h45"></li>
+					<li id="Sunday15h00"></li>
+					<li id="Sunday15h15"></li>
+					<li id="Sunday15h30"></li>
+					<li id="Sunday15h45"></li>
+					<li id="Sunday16h00"></li>
+					<li id="Sunday16h15"></li>
+					<li id="Sunday16h30"></li>
+					<li id="Sunday16h45"></li>
+					<li id="Sunday17h00"></li>
+					<li id="Sunday17h15"></li>
+					<li id="Sunday17h30"></li>
+					<li id="Sunday17h45"></li>
+					<li id="Sunday18h00"></li>
+					<li id="Sunday18h15"></li>
+					<li id="Sunday18h30"></li>
+					<li id="Sunday18h45"></li>
+					<li id="Sunday19h00"></li>
+					<li id="Sunday19h15"></li>
+					<li id="Sunday19h30"></li>
+					<li id="Sunday19h45"></li>
+					<li id="Sunday20h00"></li>
+					<li id="Sunday20h15"></li>
+					<li id="Sunday20h30"></li>
+					<li id="Sunday20h45"></li>
+				</ol>
+				</div>
+				<div class="DayOfWeek TimeSlots" id="Monday">
+				<h3><acronym title="Monday">Mon</acronym></h3>
+				<ol>
+					<li id="Monday08h00"></li>
+					<li id="Monday08h15"></li>
+					<li id="Monday08h30"></li>
+					<li id="Monday08h45"></li>
+					<li id="Monday09h00"></li>
+					<li id="Monday09h15"></li>
+					<li id="Monday09h30"></li>
+					<li id="Monday09h45"></li>
+					<li id="Monday10h00"></li>
+					<li id="Monday10h15"></li>
+					<li id="Monday10h30"></li>
+					<li id="Monday10h45"></li>
+					<li id="Monday11h00"></li>
+					<li id="Monday11h15"></li>
+					<li id="Monday11h30"></li>
+					<li id="Monday11h45"></li>
+					<li id="Monday12h00"></li>
+					<li id="Monday12h15"></li>
+					<li id="Monday12h30"></li>
+					<li id="Monday12h45"></li>
+					<li id="Monday13h00"></li>
+					<li id="Monday13h15"></li>
+					<li id="Monday13h30"></li>
+					<li id="Monday13h45"></li>
+					<li id="Monday14h00"></li>
+					<li id="Monday14h15"></li>
+					<li id="Monday14h30"></li>
+					<li id="Monday14h45"></li>
+					<li id="Monday15h00"></li>
+					<li id="Monday15h15"></li>
+					<li id="Monday15h30"></li>
+					<li id="Monday15h45"></li>
+					<li id="Monday16h00"></li>
+					<li id="Monday16h15"></li>
+					<li id="Monday16h30"></li>
+					<li id="Monday16h45"></li>
+					<li id="Monday17h00"></li>
+					<li id="Monday17h15"></li>
+					<li id="Monday17h30"></li>
+					<li id="Monday17h45"></li>
+					<li id="Monday18h00"></li>
+					<li id="Monday18h15"></li>
+					<li id="Monday18h30"></li>
+					<li id="Monday18h45"></li>
+					<li id="Monday19h00"></li>
+					<li id="Monday19h15"></li>
+					<li id="Monday19h30"></li>
+					<li id="Monday19h45"></li>
+					<li id="Monday20h00"></li>
+					<li id="Monday20h15"></li>
+					<li id="Monday20h30"></li>
+					<li id="Monday20h45"></li>
+				</ol>
+				</div>
+				<div class="DayOfWeek TimeSlots" id="Tuesday">
+				<h3><acronym title="Tuesday">Tues</acronym></h3>
+				<ol id="Tuesday">
+					<li id="Tuesday08h00"></li>
+					<li id="Tuesday08h15"></li>
+					<li id="Tuesday08h30"></li>
+					<li id="Tuesday08h45"></li>
+					<li id="Tuesday09h00"></li>
+					<li id="Tuesday09h15"></li>
+					<li id="Tuesday09h30"></li>
+					<li id="Tuesday09h45"></li>
+					<li id="Tuesday10h00"></li>
+					<li id="Tuesday10h15"></li>
+					<li id="Tuesday10h30"></li>
+					<li id="Tuesday10h45"></li>
+					<li id="Tuesday11h00"></li>
+					<li id="Tuesday11h15"></li>
+					<li id="Tuesday11h30"></li>
+					<li id="Tuesday11h45"></li>
+					<li id="Tuesday12h00"></li>
+					<li id="Tuesday12h15"></li>
+					<li id="Tuesday12h30"></li>
+					<li id="Tuesday12h45"></li>
+					<li id="Tuesday13h00"></li>
+					<li id="Tuesday13h15"></li>
+					<li id="Tuesday13h30"></li>
+					<li id="Tuesday13h45"></li>
+					<li id="Tuesday14h00"></li>
+					<li id="Tuesday14h15"></li>
+					<li id="Tuesday14h30"></li>
+					<li id="Tuesday14h45"></li>
+					<li id="Tuesday15h00"></li>
+					<li id="Tuesday15h15"></li>
+					<li id="Tuesday15h30"></li>
+					<li id="Tuesday15h45"></li>
+					<li id="Tuesday16h00"></li>
+					<li id="Tuesday16h15"></li>
+					<li id="Tuesday16h30"></li>
+					<li id="Tuesday16h45"></li>
+					<li id="Tuesday17h00"></li>
+					<li id="Tuesday17h15"></li>
+					<li id="Tuesday17h30"></li>
+					<li id="Tuesday17h45"></li>
+					<li id="Tuesday18h00"></li>
+					<li id="Tuesday18h15"></li>
+					<li id="Tuesday18h30"></li>
+					<li id="Tuesday18h45"></li>
+					<li id="Tuesday19h00"></li>
+					<li id="Tuesday19h15"></li>
+					<li id="Tuesday19h30"></li>
+					<li id="Tuesday19h45"></li>
+					<li id="Tuesday20h00"></li>
+					<li id="Tuesday20h15"></li>
+					<li id="Tuesday20h30"></li>
+					<li id="Tuesday20h45"></li>
+				</ol>
+				</div>
+				<div class="DayOfWeek TimeSlots" id="Wednesday">
+				<h3><acronym title="Wednesday">Wed</acronym></h3>
+				<ol>
+					<li id="Wednesday08h00"></li>
+					<li id="Wednesday08h15"></li>
+					<li id="Wednesday08h30"></li>
+					<li id="Wednesday08h45"></li>
+					<li id="Wednesday09h00"></li>
+					<li id="Wednesday09h15"></li>
+					<li id="Wednesday09h30"></li>
+					<li id="Wednesday09h45"></li>
+					<li id="Wednesday10h00"></li>
+					<li id="Wednesday10h15"></li>
+					<li id="Wednesday10h30"></li>
+					<li id="Wednesday10h45"></li>
+					<li id="Wednesday11h00"></li>
+					<li id="Wednesday11h15"></li>
+					<li id="Wednesday11h30"></li>
+					<li id="Wednesday11h45"></li>
+					<li id="Wednesday12h00"></li>
+					<li id="Wednesday12h15"></li>
+					<li id="Wednesday12h30"></li>
+					<li id="Wednesday12h45"></li>
+					<li id="Wednesday13h00"></li>
+					<li id="Wednesday13h15"></li>
+					<li id="Wednesday13h30"></li>
+					<li id="Wednesday13h45"></li>
+					<li id="Wednesday14h00"></li>
+					<li id="Wednesday14h15"></li>
+					<li id="Wednesday14h30"></li>
+					<li id="Wednesday14h45"></li>
+					<li id="Wednesday15h00"></li>
+					<li id="Wednesday15h15"></li>
+					<li id="Wednesday15h30"></li>
+					<li id="Wednesday15h45"></li>
+					<li id="Wednesday16h00"></li>
+					<li id="Wednesday16h15"></li>
+					<li id="Wednesday16h30"></li>
+					<li id="Wednesday16h45"></li>
+					<li id="Wednesday17h00"></li>
+					<li id="Wednesday17h15"></li>
+					<li id="Wednesday17h30"></li>
+					<li id="Wednesday17h45"></li>
+					<li id="Wednesday18h00"></li>
+					<li id="Wednesday18h15"></li>
+					<li id="Wednesday18h30"></li>
+					<li id="Wednesday18h45"></li>
+					<li id="Wednesday19h00"></li>
+					<li id="Wednesday19h15"></li>
+					<li id="Wednesday19h30"></li>
+					<li id="Wednesday19h45"></li>
+					<li id="Wednesday20h00"></li>
+					<li id="Wednesday20h15"></li>
+					<li id="Wednesday20h30"></li>
+					<li id="Wednesday20h45"></li>
+				</ol>
+				</div>
+				<div class="DayOfWeek TimeSlots" id="Thursday">
+				<h3><acronym title="Thursday">Thurs</acronym></h3>
+				<ol id="Thursday">
+					<li id="Thursday08h00"></li>
+					<li id="Thursday08h15"></li>
+					<li id="Thursday08h30"></li>
+					<li id="Thursday08h45"></li>
+					<li id="Thursday09h00"></li>
+					<li id="Thursday09h15"></li>
+					<li id="Thursday09h30"></li>
+					<li id="Thursday09h45"></li>
+					<li id="Thursday10h00"></li>
+					<li id="Thursday10h15"></li>
+					<li id="Thursday10h30"></li>
+					<li id="Thursday10h45"></li>
+					<li id="Thursday11h00"></li>
+					<li id="Thursday11h15"></li>
+					<li id="Thursday11h30"></li>
+					<li id="Thursday11h45"></li>
+					<li id="Thursday12h00"></li>
+					<li id="Thursday12h15"></li>
+					<li id="Thursday12h30"></li>
+					<li id="Thursday12h45"></li>
+					<li id="Thursday13h00"></li>
+					<li id="Thursday13h15"></li>
+					<li id="Thursday13h30"></li>
+					<li id="Thursday13h45"></li>
+					<li id="Thursday14h00"></li>
+					<li id="Thursday14h15"></li>
+					<li id="Thursday14h30"></li>
+					<li id="Thursday14h45"></li>
+					<li id="Thursday15h00"></li>
+					<li id="Thursday15h15"></li>
+					<li id="Thursday15h30"></li>
+					<li id="Thursday15h45"></li>
+					<li id="Thursday16h00"></li>
+					<li id="Thursday16h15"></li>
+					<li id="Thursday16h30"></li>
+					<li id="Thursday16h45"></li>
+					<li id="Thursday17h00"></li>
+					<li id="Thursday17h15"></li>
+					<li id="Thursday17h30"></li>
+					<li id="Thursday17h45"></li>
+					<li id="Thursday18h00"></li>
+					<li id="Thursday18h15">
+						<!--
+							Take note that this is not the same as it was in the tutorials!
+							It used to be a <div> element, and now it is an anchor <a>
+							This means it is no longer a block level element but an inline level element,
+							and you will have to use the CSS 'display' property if you want to assign it a height...
+						-->
+						<a href="#SOEN287-Tutorial-SectionC">
+							SOEN287 Tutorial Section C
+						</a>
+					</li>
+					<li id="Thursday18h30"></li>
+					<li id="Thursday18h45"></li>
+					<li id="Thursday19h00"></li>
+					<li id="Thursday19h15"></li>
+					<li id="Thursday19h30"></li>
+					<li id="Thursday19h45"></li>
+					<li id="Thursday20h00"></li>
+					<li id="Thursday20h15"></li>
+					<li id="Thursday20h30"></li>
+					<li id="Thursday20h45"></li>
+				</ol>
+				</div>
+				<div class="DayOfWeek TimeSlots" id="Friday">
+				<h3><acronym title="Friday">Fri</acronym></h3>
+				<ol>
+					<li id="Friday08h00"></li>
+					<li id="Friday08h15"></li>
+					<li id="Friday08h30"></li>
+					<li id="Friday08h45"></li>
+					<li id="Friday09h00"></li>
+					<li id="Friday09h15"></li>
+					<li id="Friday09h30"></li>
+					<li id="Friday09h45"></li>
+					<li id="Friday10h00"></li>
+					<li id="Friday10h15"></li>
+					<li id="Friday10h30"></li>
+					<li id="Friday10h45"></li>
+					<li id="Friday11h00"></li>
+					<li id="Friday11h15"></li>
+					<li id="Friday11h30"></li>
+					<li id="Friday11h45"></li>
+					<li id="Friday12h00"></li>
+					<li id="Friday12h15"></li>
+					<li id="Friday12h30"></li>
+					<li id="Friday12h45"></li>
+					<li id="Friday13h00"></li>
+					<li id="Friday13h15"></li>
+					<li id="Friday13h30"></li>
+					<li id="Friday13h45"></li>
+					<li id="Friday14h00"></li>
+					<li id="Friday14h15"></li>
+					<li id="Friday14h30"></li>
+					<li id="Friday14h45"></li>
+					<li id="Friday15h00"></li>
+					<li id="Friday15h15"></li>
+					<li id="Friday15h30"></li>
+					<li id="Friday15h45"></li>
+					<li id="Friday16h00"></li>
+					<li id="Friday16h15"></li>
+					<li id="Friday16h30"></li>
+					<li id="Friday16h45"></li>
+					<li id="Friday17h00"></li>
+					<li id="Friday17h15"></li>
+					<li id="Friday17h30"></li>
+					<li id="Friday17h45"></li>
+					<li id="Friday18h00"></li>
+					<li id="Friday18h15"></li>
+					<li id="Friday18h30"></li>
+					<li id="Friday18h45"></li>
+					<li id="Friday19h00"></li>
+					<li id="Friday19h15"></li>
+					<li id="Friday19h30"></li>
+					<li id="Friday19h45"></li>
+					<li id="Friday20h00"></li>
+					<li id="Friday20h15"></li>
+					<li id="Friday20h30"></li>
+					<li id="Friday20h45"></li>
+				</ol>
+				</div>
+				<div class="DayOfWeek TimeSlots" id="Saturday">
+				<h3><acronym title="Saturday">Sat</acronym></h3>
+				<ol>
+					<li id="Saturday08h00"></li>
+					<li id="Saturday08h15"></li>
+					<li id="Saturday08h30"></li>
+					<li id="Saturday08h45"></li>
+					<li id="Saturday09h00"></li>
+					<li id="Saturday09h15"></li>
+					<li id="Saturday09h30"></li>
+					<li id="Saturday09h45"></li>
+					<li id="Saturday10h00"></li>
+					<li id="Saturday10h15"></li>
+					<li id="Saturday10h30"></li>
+					<li id="Saturday10h45"></li>
+					<li id="Saturday11h00"></li>
+					<li id="Saturday11h15"></li>
+					<li id="Saturday11h30"></li>
+					<li id="Saturday11h45"></li>
+					<li id="Saturday12h00"></li>
+					<li id="Saturday12h15"></li>
+					<li id="Saturday12h30"></li>
+					<li id="Saturday12h45"></li>
+					<li id="Saturday13h00"></li>
+					<li id="Saturday13h15"></li>
+					<li id="Saturday13h30"></li>
+					<li id="Saturday13h45"></li>
+					<li id="Saturday14h00"></li>
+					<li id="Saturday14h15"></li>
+					<li id="Saturday14h30"></li>
+					<li id="Saturday14h45"></li>
+					<li id="Saturday15h00"></li>
+					<li id="Saturday15h15"></li>
+					<li id="Saturday15h30"></li>
+					<li id="Saturday15h45"></li>
+					<li id="Saturday16h00"></li>
+					<li id="Saturday16h15"></li>
+					<li id="Saturday16h30"></li>
+					<li id="Saturday16h45"></li>
+					<li id="Saturday17h00"></li>
+					<li id="Saturday17h15"></li>
+					<li id="Saturday17h30"></li>
+					<li id="Saturday17h45"></li>
+					<li id="Saturday18h00"></li>
+					<li id="Saturday18h15"></li>
+					<li id="Saturday18h30"></li>
+					<li id="Saturday18h45"></li>
+					<li id="Saturday19h00"></li>
+					<li id="Saturday19h15"></li>
+					<li id="Saturday19h30"></li>
+					<li id="Saturday19h45"></li>
+					<li id="Saturday20h00"></li>
+					<li id="Saturday20h15"></li>
+					<li id="Saturday20h30"></li>
+					<li id="Saturday20h45"></li>
+				</ol>
+			</div>
+			<form action="#">
+				<h3>Add an Event To The Calendar:</h3>
+				<div id="EventName">
+					<label for="NewEventName">Event Name:</label><input name="NewEventName" id="NewEventName" />
+				</div>
+				<div id="EventDay">
+					<label for="NewEventDay">Event Day:</label>
+					<select id="NewEventDay" name="NewEventDay">
+						<option value="Sunday">Sunday</option>
+						<option value="Monday">Monday</option>
+						<option value="Tuesday">Tuesay</option>
+						<option value="Wednesday">Wednesday</option>
+						<option value="Thursday">Thursday</option>
+						<option value="Friday">Friday</option>
+						<option value="Saturday">Saturday</option>
+					</select>
+				</div>
+				<div id="EventTime">
+					<label for="NewEventHour">Event Time:</label>
+					<select id="NewEventHour" name="NewEventHour">
+						<option value="08">08</option>
+						<option value="09">09</option>
+						<option value="10">10</option>
+						<option value="11">11</option>
+						<option value="12">12</option>
+						<option value="13">13</option>
+						<option value="14">14</option>
+						<option value="15">15</option>
+						<option value="16">16</option>
+						<option value="17">17</option>
+						<option value="18">18</option>
+						<option value="19">19</option>
+						<option value="20">20</option>
+					</select>
+					h
+					<select id="NewEventMinutes" name="NewEventMinutes">
+						<option value="00">00</option>
+						<option value="15">15</option>
+						<option value="45">45</option>
+					</select>
+				</div>
+				<div id="EventDuration">
+					<label for="NewEventDuration">Event Duration:</label>
+					<select id="NewEventDuration" name="NewEventDuration">
+						<option value="00">00</option>
+						<option value="15">15</option>
+						<option value="45">45</option>
+						<option value="60">60</option>
+						<option value="75">75</option>
+						<option value="90">90</option>
+						<option value="105">105</option>
+						<option value="120">120</option>
+						<option value="135">135</option>
+						<option value="150">150</option>
+						<option value="165">165</option>
+						<option value="180">180</option>
+						<option value="195">195</option>
+					</select>
+				</div>
+				<div id="AddEvent">
+					<input type="button" value="Add New Event!"  id="AddNewEvent" />
+				</div>
+			</form>
+		</div>
+	</div>
+</body>
+</html>
