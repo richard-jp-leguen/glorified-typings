@@ -133,7 +133,7 @@ What about the body though? We still haven't read the contents of a request body
     	$request .= $stdin;
     } while($stdin =~ /\S/);
 
-We didn't continue to read the request body because there is no EOF character in an HTTP request. If you have no idea what I'm talking about, you might want to revisit the "Reading an HTTP Request Out of STDIN" part of [this](tut-12.http-script.md) tutorial.
+We didn't continue to read the request body because there is no EOF character in an HTTP request. If you have no idea what I'm talking about, you might want to revisit the "Reading an HTTP Request Out of STDIN" part of [this](tut-13.http-script.md) tutorial.
 
 Once we've read the request line, headers, and empty line out of the STDIN, we will have to use the built-in perl function `read` to read the body of the request. The `read` function takes three parameters: a file handle, a scalar variable, and a length; a number of characters will be read from the file handle, and saved in your scalar variable. Here's an example: (in which we also use the `-s` file test to get the file's size)
 

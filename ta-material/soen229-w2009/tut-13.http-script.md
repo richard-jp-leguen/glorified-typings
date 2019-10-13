@@ -6,7 +6,7 @@ In this tutorial, we're going to write a simplistic script which reads an HTTP r
 
 You do **not** need to know _*ANYTHING*_ about networking or socket programming to go through with either this tutorial, nor the material we will be covering later in the semester! If you don't know what I mean by either "networking" nor "socket programming" don't worry! You shouldn't know those concepts, you don't have to know those concepts, and you won't have to know those concepts!
 
-All we're doing is writing a script which reads specially formatted text input – called an HTTP request (see [this](tut-11.web-and-http.md) tutorial) – via STDIN, and generates specially formatted text output – via STDOUT – which we call an HTTP response (again, see [this](tut-11.web-and-http.md) tutorial).
+All we're doing is writing a script which reads specially formatted text input – called an HTTP request (see [this](tut-12.web-and-http.md) tutorial) – via STDIN, and generates specially formatted text output – via STDOUT – which we call an HTTP response (again, see [this](tut-12.web-and-http.md) tutorial).
 
 Once you're done, you may want to test the script we write in this tutorial. There would be no better way to do this than actually send it an HTTP response from you favorite web browser (which should be Firefox!). So you can do this without knowing _*ANYTHING*_ about networking or socket programming I've provided a script, [HttpWebServer.pl](scripts/HttpWebServer.pl), which will let you do exactly that!
 
@@ -30,7 +30,7 @@ And if – at the end of tutorial – your script works, you should see a hello 
 
 ### Outputting an HTTP Response to STDOUT
 
-We're going to start with producing an HTTP response. We want to write an HTTP response to STDOUT. As we saw in [this](tut-11.web-and-http.md) tutorial an HTTP response begins with a status line, like the following:
+We're going to start with producing an HTTP response. We want to write an HTTP response to STDOUT. As we saw in [this](tut-12.web-and-http.md) tutorial an HTTP response begins with a status line, like the following:
 
     print STDOUT "HTTP/1.0 200 OK\n";
 
